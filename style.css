@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'cormorant garamond', sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(195deg, #c8ede6, #10dfb7);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.todo-app {
+  background-color: #fff;
+  width: 700px;
+  max-height: 600px;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo-title img {
+  height: 50px;
+}
+
+.todo-title p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d4fff6;
+  border-radius: 10px;
+  padding-left: 0.3rem;
+  margin-top: 1rem;
+  height: 60px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding-right: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+button img {
+  height: 50px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.lists-container {
+  max-height: 600px;
+  overflow: scroll;
+}
+
+ul li::before {
+  content: ' ';
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 20px;
+  left: 10px;
+}
+
+ul li.checked {
+  color: #777;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+  background-size: cover;
+}
+
+ul li span {
+  position: absolute;
+  right: 5%;
+  top: 5px;
+  font-size: 3rem;
+  text-align: center;
+  color: #555;
+}
+
+ul li span:hover {
+  cursor: pointer;
+  color: #08a183;
+}
